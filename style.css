@@ -1,0 +1,1462 @@
+/* --- RESET GENERAL --- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+overflow-x: hidden;
+}
+
+/* --- SECCIÓN HERO --- */
+.hero {
+position: relative;
+height: 100vh;
+background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+url('portada.jpg') no-repeat center center;
+background-size: cover;
+display: flex;
+align-items: center;
+padding-left: 8%;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+position: absolute;
+top: 30px;
+left: 0;
+width: 100%;
+z-index: 100;
+}
+
+.nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 92%;
+margin: 0 auto;
+}
+
+.nav-right {
+display: flex;
+gap: 12px;
+}
+
+.nav-pill {
+text-decoration: none;
+color: white;
+font-weight: 700;
+font-size: 13px;
+padding: 10px 25px;
+border: 1.5px solid rgba(255, 255, 255, 0.5);
+border-radius: 50px;
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(8px);
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-pill:hover {
+background-color: white;
+color: #8fb1c6;
+transform: scale(1.1) translateY(-3px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- TEXTO HERO --- */
+.hero-text h1 {
+font-family: 'Libre Bodoni', serif;
+font-size: 180px;
+color: white;
+line-height: 0.8;
+text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-text h2 {
+color: white;
+font-size: 35px;
+letter-spacing: 6px;
+font-weight: 500;
+margin-top: 10px;
+}
+
+/* --- INTRO AZUL --- */
+.contenedor-azul {
+background-color: #9abfd3;
+color: white;
+text-align: center;
+padding: 120px 15%;
+}
+
+.contenedor-azul h3 {
+font-family: 'Libre Bodoni', serif;
+font-size: 80px;
+margin-bottom: 25px;
+}
+
+/* --- ACTIVIDADES --- */
+.actividades {
+padding: 80px 5%;
+background-color: #ffffff;
+text-align: center;
+}
+
+.titulo-actividades {
+font-family: 'Libre Bodoni', serif;
+font-size: 60px;
+color: #8fb1c6;
+margin-bottom: 50px;
+}
+
+.grid-actividades {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.tarjeta-actividad {
+display: block;
+border-radius: 15px;
+overflow: hidden;
+position: relative;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.imagen-wrapper {
+position: relative;
+width: 100%;
+padding-top: 100%;
+}
+
+.imagen-wrapper img {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.tarjeta-actividad:hover {
+transform: scale(1.05) translateY(-10px);
+}
+
+.overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(143, 177, 198, 0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.tarjeta-actividad:hover .overlay {
+opacity: 1;
+}
+
+/* --- PLAZAS --- */
+.seccion-plazas {
+background-color: #9abfd3;
+padding: 100px 5%;
+text-align: center;
+color: white;
+}
+
+.titulo-plazas {
+font-family: 'Libre Bodoni', serif;
+font-size: 90px;
+margin-bottom: 60px;
+}
+
+.grid-plazas {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 80px 40px;
+max-width: 900px;
+margin: auto;
+}
+
+/* ============================= */
+/* 🔵 FIX CENTRADO ICONOS PLAZAS */
+/* ============================= */
+
+.plaza-item {
+text-decoration: none;
+color: white;
+transition: transform 0.4s;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.plaza-item img {
+width: 70px;
+margin-bottom: 15px;
+}
+
+.plaza-item p {
+margin: 0;
+font-size: 16px;
+letter-spacing: 2px;
+}
+
+.plaza-item:hover {
+transform: scale(1.2);
+}
+
+/* ===================== */
+/* PAGINA PALERMO */
+/* ===================== */
+
+body.palermo-body {
+background-color: #507095;
+color: white;
+}
+
+.palermo-body .navbar {
+position: absolute;
+top: 30px;
+width: 100%;
+}
+
+.palermo-intro {
+width: 80%;
+margin: auto;
+padding-top: 120px;
+padding-bottom: 80px;
+}
+
+.palermo-grid {
+display: grid;
+grid-template-columns: 400px 1fr;
+gap: 60px;
+align-items: center;
+}
+
+.palermo-img {
+width: 100%;
+}
+
+.palermo-title {
+font-family: 'Libre Bodoni', serif;
+font-size: 150px;
+font-weight: 400;
+}
+
+.palermo-text {
+font-size: 14px;
+line-height: 1.7;
+max-width: 600px;
+}
+
+.palermo-banner {
+width: 100%;
+display: block;
+}
+
+.piazza {
+width: 80%;
+margin: auto;
+padding-top: 80px;
+text-align: center;
+}
+
+.piazza-title {
+font-family: 'Libre Bodoni', serif;
+font-size: 100px;
+font-weight: 400;
+margin-bottom: 40px;
+}
+
+.piazza-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+
+.piazza-img,
+.piazza-map {
+width: 100%;
+}
+
+.piazza-text {
+max-width: 600px;
+margin: auto;
+margin-top: 40px;
+font-size: 14px;
+line-height: 1.7;
+}
+
+.teatro {
+width: 80%;
+margin: auto;
+padding-top: 80px;
+padding-bottom: 120px;
+}
+
+.teatro-grid {
+display: grid;
+grid-template-columns: 1fr 400px;
+gap: 60px;
+align-items: center;
+}
+
+.teatro-img {
+width: 100%;
+}
+
+.teatro-title {
+font-family: 'Libre Bodoni', serif;
+font-size: 50px;
+font-weight: 400;
+margin-bottom: 20px;
+}
+
+.teatro-text {
+font-size: 14px;
+line-height: 1.7;
+}
+
+
+
+
+/* ===================== */
+/* PAGINA CATANIA        */
+/* ===================== */
+
+body.catania-body {
+    background-color: #2c2c2c; /* Color lava/piedra volcánica */
+    color: white;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.catania-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+/* INTRO */
+
+.catania-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.catania-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.catania-img {
+    width: 100%;
+}
+
+.catania-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 130px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.catania-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* IMAGEN GRANDE */
+
+.catania-banner {
+    width: 100%;
+    display: block;
+}
+
+/* PIAZZA */
+
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+}
+
+.piazza-text {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left; /* Alineado a la izquierda para mejor lectura del texto largo */
+}
+
+/* MERCADO (Reemplaza a la sección Teatro) */
+
+.mercado {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.mercado-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: center;
+}
+
+.mercado-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.mercado-text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Ajuste para la imagen del mercado que usa clase teatro-img en tu HTML */
+.teatro-img {
+    width: 100%;
+}
+
+
+
+/* ===================== */
+/* PAGINA MESINA         */
+/* ===================== */
+
+body.mesina-body {
+    background-color: #1a3c5a; /* Azul marino profundo del Estrecho */
+    color: white;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.mesina-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+/* INTRO */
+
+.mesina-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.mesina-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mesina-img {
+    width: 100%;
+}
+
+.mesina-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 130px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.mesina-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* IMAGEN GRANDE */
+
+.catania-banner {
+    width: 100%;
+    display: block;
+}
+
+/* PIAZZA */
+
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+}
+
+.piazza-text {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* ESPECTÁCULO (Sección final) */
+
+.espectáculo {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.espectáculo-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: center;
+}
+
+.espectáculo-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Reutilización de clases del HTML para mantener compatibilidad */
+.mercado-text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.teatro-img {
+    width: 100%;
+}
+
+
+
+
+
+/* ===================== */
+/* PAGINA SIRACUSA       */
+/* ===================== */
+
+body.siracusa-body {
+    background-color: #f7e7ce; /* Un tono crema/piedra caliza típico de Ortigia */
+    color: #333; /* Texto oscuro para mejor legibilidad sobre fondo claro */
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-pill {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 20px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.nav-pill:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* INTRO SIRACUSA */
+
+.siracusa-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.siracusa-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.siracusa-img {
+    width: 100%;
+    height: auto;
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.05); /* Efecto decorativo */
+}
+
+.siracusa-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 110px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 0.9;
+    color: #2c2c2c;
+}
+
+.siracusa-text {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+/* IMAGEN GRANDE (BANNER) */
+
+.palermo-banner {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+/* PIAZZA DEL DUOMO */
+
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.piazza-text {
+    max-width: 800px;
+    margin: 60px auto;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: left;
+    column-count: 2; /* Divide el texto en dos columnas para estilo editorial */
+    column-gap: 40px;
+}
+
+/* PARQUE ARQUEOLOGICO */
+
+.parque.arqueologico {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
+.parque.arqueologico-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 80px;
+    align-items: center;
+}
+
+.teatro-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.teatro-text {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.parque.arqueologico-img {
+    width: 100%;
+    height: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .siracusa-grid, .parque.arqueologico-grid, .piazza-grid {
+        grid-template-columns: 1fr;
+    }
+    .siracusa-title { font-size: 70px; }
+    .piazza-text { column-count: 1; }
+}
+
+
+
+
+
+/* ===================== */
+/* PÁGINA AGRIGENTO      */
+/* ===================== */
+
+body.agrigento-body {
+    background-color: #f4e9d5; /* Arena clara, color de la piedra de los templos */
+    color: #2c2c2c;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.agrigento-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+/* INTRO */
+
+.agrigento-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.agrigento-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Adaptado a la clase palermo-img que usaste en el HTML */
+.agrigento-body .palermo-img {
+    width: 100%;
+    filter: sepia(0.2); /* Toque cálido histórico */
+}
+
+.agrigento-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 110px; /* Un poco más pequeño para encajar el nombre largo */
+    font-weight: 400;
+    margin: 0;
+    color: #8b5a2b; /* Ocre/Bronce */
+    text-transform: uppercase;
+}
+
+.agrigento-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* IMAGEN GRANDE (BANNER) */
+
+.palermo-banner {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+/* PIAZZA PURGATORIO */
+
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #8b5a2b;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.piazza-text {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* ATARDECER (Sección final "Teatro") */
+
+.teatro {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.teatro-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 60px;
+    align-items: center;
+}
+
+.teatro-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #a67c00; /* Dorado atardecer */
+}
+
+.teatro-text {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.teatro-img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+
+
+
+
+/* ===================== */
+/* PÁGINA CALTANISSETTA  */
+/* ===================== */
+
+body.catania-body {
+    background-color: #f7f3ed; /* Crema suave, tono de ciudad de interior */
+    color: #333;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.catania-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+/* INTRO CALTANISSETTA */
+
+.caltanissetta-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.catania-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.caltanissetta-img {
+    width: 100%;
+    box-shadow: 20px 20px 0px #d4a373; /* Detalle en color tierra */
+}
+
+.caltanissetta-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 85px; /* Ajustado para que el nombre largo no se corte */
+    font-weight: 400;
+    margin: 0;
+    color: #8b4513; /* Marrón siena/tierra */
+    text-transform: uppercase;
+}
+
+.caltanissetta-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* IMAGEN GRANDE (BANNER) */
+
+.catania-banner {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    filter: sepia(0.1);
+}
+
+/* PIAZZA GARIBALDI */
+
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #8b4513;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.piazza-text {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* MERCADO / TEATRO MARGHERITA */
+
+.mercado {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.mercado-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 60px;
+    align-items: center;
+}
+
+.mercado-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #a67c00; /* Dorado aristocrático */
+}
+
+.mercado-text {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.teatro-img {
+    width: 100%;
+    filter: contrast(1.1);
+}
+
+
+
+
+
+/* ===================== */
+/* PÁGINA TRAPANI        */
+/* ===================== */
+
+body.trapani-body {
+    background-color: #f8f9fa; /* Blanco salino muy suave */
+    color: #333;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.trapani-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 10;
+}
+
+/* INTRO TRAPANI */
+
+.trapani-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+/* Mantengo palermo-grid porque así está en tu HTML */
+.palermo-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.trapani-img {
+    width: 100%;
+    border-bottom: 8px solid #0077b6; /* Azul marino profundo */
+}
+
+.palermo-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 110px;
+    font-weight: 400;
+    margin: 0;
+    color: #e76f51; /* Tono coral/terracota suave */
+    letter-spacing: -3px;
+}
+
+.trapani-text {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 600px;
+    color: #4a4a4a;
+}
+
+/* IMAGEN GRANDE (BANNER) */
+
+.palermo-banner {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.8) contrast(1.1);
+}
+
+/* PIAZZA MERCATO DEL PESCE */
+
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 70px; /* Ajustado para el nombre largo de la plaza */
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #2a9d8f; /* Verde azulado del mar poco profundo */
+    text-transform: uppercase;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: 10px 10px 0px rgba(42, 157, 143, 0.1);
+}
+
+.piazza-text {
+    max-width: 750px;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+    border-left: 3px solid #e76f51;
+    padding-left: 30px;
+}
+
+/* SECCIÓN PUERTO (TEATRO) */
+
+.teatro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.teatro-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 60px;
+    align-items: center;
+}
+
+.teatro-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #0077b6; /* Azul náutico */
+}
+
+.teatro-text {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.teatro-img {
+    width: 100%;
+    border-radius: 50% 50% 0 0; /* Forma de arco que evoca la arquitectura del puerto */
+    object-fit: cover;
+    height: 400px;
+}
+
+
+
+
+
+/* ===================== */
+/* PÁGINA RAGUSA         */
+/* ===================== */
+
+body.ragusa-body {
+    background-color: #fcfaf7; /* Blanco roto, color de la piedra caliza bajo el sol */
+    color: #333;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.ragusa-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+/* INTRO RAGUSA */
+
+.ragusa-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.ragusa-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.ragusa-img {
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 20px 20px 0px #d4d4d4; /* Sombra sólida estilo arquitectónico */
+}
+
+.ragusa-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 130px;
+    font-weight: 400;
+    margin: 0;
+    color: #2c3e50; /* Azul pizarra profundo, elegante */
+    letter-spacing: -3px;
+}
+
+.ragusa-text {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 600px;
+    color: #555;
+}
+
+/* IMAGEN GRANDE (BANNER) */
+
+.ragusa-banner {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    
+}
+
+
+
+
+
+/* ===================== */
+/* PÁGINA ENNA           */
+/* ===================== */
+
+body.enna-body {
+    background-color: #e3e9ed; /* Azul grisáceo muy claro, evocando la niebla y el cielo de Enna */
+    color: #2f353b;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.enna-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+/* INTRO ENNA */
+
+.enna-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.enna-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.enna-img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Usando la clase ragusa-title que tienes en el HTML */
+.ragusa-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 130px;
+    font-weight: 400;
+    margin: 0;
+    color: #4a5d6a; /* Gris azulado profundo */
+    letter-spacing: 5px;
+}
+
+/* Usando la clase ragusa-text que tienes en el HTML */
+.ragusa-text {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 600px;
+    color: #545b62;
+}
+
+/* IMAGEN GRANDE (BANNER) */
+
+.ragusa-banner {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    display: block;
+    filter: contrast(1.05);
+}
+
+/* PIAZZA VITTORIO EMANUELE */
+
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 70px; /* Ajustado para que quepa el nombre largo */
+    font-weight: 400;
+    margin-bottom: 45px;
+    color: #4a5d6a;
+    text-transform: uppercase;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border: 1px solid #c9d6df;
+}
+
+.piazza-text {
+    max-width: 800px;
+    margin: 50px auto 0;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: justify
+}
+
+
+
+
+
+
+/* ===================== */
+/* FOOTER SICILIANAS */
+/* ===================== */
+
+.footer {
+background-color: #FFF5E1;
+color: #333;
+padding: 60px 20px;
+text-align: center;
+font-family: 'Montserrat', sans-serif;
+}
+
+.footer h3 {
+margin-bottom: 15px;
+font-family: 'Libre Bodoni', serif;
+font-size: 28px;
+color: #8fb1c6;
+}
+
+.footer p {
+margin-bottom: 10px;
+font-size: 14px;
+}
+
+.footer a {
+margin: 0 10px;
+color: #FF7F11;
+text-decoration: none;
+font-weight: 500;
+}
+
+.footer a:hover {
+text-decoration: underline;
+}
+
+.footer input[type="email"] {
+padding: 8px 10px;
+width: 220px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-right: 10px;
+}
+
+.footer button {
+padding: 8px 15px;
+background-color: #FF7F11;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-weight: 500;
+transition: background 0.3s;
+}
+
+.footer button:hover {
+background-color: #e66b0f;
+}
+
+.footer-extras p {
+font-size: 13px;
+margin: 5px 0;
+}
+
+.footer-legal {
+margin-top: 40px;
+font-size: 12px;
+color: #666;
+}
+
+
+
+
+
+
+
+
+
+
